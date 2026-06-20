@@ -1,0 +1,29 @@
+[project]
+name = "credit-default-risk"
+version = "0.1.0"
+description = "Credit card default risk scoring project"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "joblib",
+    "openpyxl",
+    "xlrd>=2.0.1",
+    "xgboost",
+    "lightgbm",
+    "catboost",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "nbformat", "nbclient"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
